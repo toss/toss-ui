@@ -1,3 +1,3 @@
-export function styled() {
+export function styled(): string {
   return "styled";
 }

@@ -2,11 +2,28 @@
   "name": "@toss-ui/styled",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./src --ext .ts,.tsx"
   },
   "devDependencies": {
+    "@types/eslint": "*",
     "@types/jest": "*",
     "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-config-airbnb-typescript": "*",
+    "eslint-config-prettier": "*",
+    "eslint-import-resolver-node": "*",
+    "eslint-plugin-eslint-comments": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-unicorn": "*",
     "jest": "*",
     "ts-jest": "*",
     "typescript": "*"

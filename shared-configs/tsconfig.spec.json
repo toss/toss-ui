@@ -1,11 +1,6 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "paths": {
-      "@toss-ui/*": ["../*/src"]
-    },
-    "rootDir": "../../",
     "types": ["jest", "node"]
   }
 }

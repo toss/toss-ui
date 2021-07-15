@@ -1,5 +1,5 @@
 import { styled } from "@toss-ui/styled";
 
-export function layout() {
+export function layout(): string {
   return `layout ${styled()}`;
 }
