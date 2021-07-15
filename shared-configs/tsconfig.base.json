@@ -5,6 +5,11 @@
     "lib": ["ESNext"],
     "module": "CommonJS",
     "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
     "strict": true,
     "target": "ESNext"
   }
