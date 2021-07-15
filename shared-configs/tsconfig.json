@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "paths": {
+      "@toss-ui/*": ["packages/*/src"]
+    },
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015"
+  }
+}

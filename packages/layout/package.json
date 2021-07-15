@@ -1,0 +1,16 @@
+{
+  "name": "@toss-ui/layout",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@toss-ui/styled": "workspace:packages/styled"
+  },
+  "devDependencies": {
+    "@types/jest": "*",
+    "jest": "*",
+    "ts-jest": "*",
+    "typescript": "*"
+  }
+}
