@@ -1,0 +1,7 @@
+{
+  "extends": "./shared-configs/tsconfig.base.json",
+  "paths": {
+    "baseUrl": ".",
+    "@toss-ui/*": ["packages/*/src"]
+  }
+}

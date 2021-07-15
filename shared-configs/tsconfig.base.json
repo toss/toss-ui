@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "ESNext"
+  }
+}

@@ -1,4 +1,14 @@
 {
   "name": "@toss-ui/styled",
-  "main": "src/index.ts"
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "*",
+    "@types/node": "*",
+    "jest": "*",
+    "ts-jest": "*",
+    "typescript": "*"
+  }
 }

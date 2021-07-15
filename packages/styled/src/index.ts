@@ -1,3 +1,1 @@
-export function styled() {
-  return "styled";
-}
+export { styled } from "./styled";
