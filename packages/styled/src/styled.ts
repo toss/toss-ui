@@ -1,3 +1,3 @@
 export function styled(): string {
-  return "styled";
+  return 'styled';
 }

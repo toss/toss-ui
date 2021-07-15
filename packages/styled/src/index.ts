@@ -1,1 +1,1 @@
-export { styled } from "./styled";
+export { styled } from './styled';
