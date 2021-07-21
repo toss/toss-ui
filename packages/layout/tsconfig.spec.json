@@ -1,4 +1,7 @@
 {
-  "extends": "../../shared-configs/tsconfig.spec.json",
-  "include": ["src/**/*.spec.ts", "src/**/*.spec.tsx"]
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  },
+  "include": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.d.ts"]
 }

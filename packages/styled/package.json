@@ -1,14 +1,21 @@
 {
   "name": "@toss-ui/styled",
-  "main": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./src --ext .ts,.tsx"
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "build": "rollup --config rollup.config.js"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "*",
+    "@rollup/plugin-json": "*",
+    "@rollup/plugin-node-resolve": "*",
     "@types/eslint": "*",
     "@types/jest": "*",
     "@types/node": "*",
+    "@types/prettier": "*",
+    "@types/rollup-plugin-peer-deps-external": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
@@ -25,7 +32,12 @@
     "eslint-plugin-react-hooks": "*",
     "eslint-plugin-unicorn": "*",
     "jest": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "rollup-plugin-peer-deps-external": "*",
+    "rollup-plugin-typescript2": "*",
     "ts-jest": "*",
+    "tslib": "*",
     "typescript": "*"
   }
 }
