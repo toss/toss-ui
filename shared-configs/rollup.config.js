@@ -4,22 +4,23 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
 
-const requiredFields = ['main', 'module'];
+const requiredPublishConfigFields = ['main', 'module'];
 
 export function makeRollupConfig(packageJSON, options = {}) {
-  const missingField = requiredFields.find(
-    (field) => packageJSON[field] === undefined
+  const publishConfig = packageJSON.publishConfig;
+  const missingField = requiredPublishConfigFields.find(
+    (field) => publishConfig[field] === undefined
   );
   if (missingField !== undefined) {
     throw new Error(`'${missingField}' is missing in package.json`);
   }
 
-  const modulePathTokens = packageJSON.module.split('/');
+  const modulePathTokens = publishConfig.module.split('/');
   return {
     input: 'src/index.ts',
     output: [
       {
-        file: packageJSON.main,
+        file: publishConfig.main,
         format: 'cjs',
         sourcemap: true,
       },
