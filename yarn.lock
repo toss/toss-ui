@@ -3638,14 +3638,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@toss-ui/layout@workspace:packages/layout":
+"@toss-ui/react-primitives@workspace:packages/uikit":
   version: 0.0.0-use.local
-  resolution: "@toss-ui/layout@workspace:packages/layout"
+  resolution: "@toss-ui/react-primitives@workspace:packages/uikit"
   dependencies:
+    "@babel/core": "*"
+    "@mdx-js/react": "*"
     "@rollup/plugin-commonjs": "*"
     "@rollup/plugin-json": "*"
     "@rollup/plugin-node-resolve": "*"
+    "@storybook/addon-actions": "*"
+    "@storybook/addon-docs": "*"
+    "@storybook/addon-essentials": "*"
+    "@storybook/addon-links": "*"
+    "@storybook/react": "*"
     "@toss-ui/styled-variants": "workspace:packages/styled-variants"
+    "@types/babel__core": "*"
     "@types/eslint": "*"
     "@types/jest": "*"
     "@types/node": "*"

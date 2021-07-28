@@ -1,5 +1,5 @@
 {
-  "name": "@toss-ui/layout",
+  "name": "@toss-ui/react-primitives",
   "main": "src/index.ts",
   "publishConfig": {
     "main": "dist/cjs/index.js",
@@ -8,15 +8,25 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "build": "rollup --config rollup.config.js"
+    "build": "rollup --config rollup.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@toss-ui/styled-variants": "workspace:packages/styled-variants"
   },
   "devDependencies": {
+    "@babel/core": "*",
+    "@mdx-js/react": "*",
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-json": "*",
     "@rollup/plugin-node-resolve": "*",
+    "@storybook/addon-actions": "*",
+    "@storybook/addon-docs": "*",
+    "@storybook/addon-essentials": "*",
+    "@storybook/addon-links": "*",
+    "@storybook/react": "*",
+    "@types/babel__core": "*",
     "@types/eslint": "*",
     "@types/jest": "*",
     "@types/node": "*",
@@ -24,6 +34,7 @@
     "@types/rollup-plugin-peer-deps-external": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "babel-loader": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-airbnb-typescript": "*",
