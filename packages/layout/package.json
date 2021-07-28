@@ -8,7 +8,7 @@
     "build": "rollup --config rollup.config.js"
   },
   "dependencies": {
-    "@toss-ui/styled": "workspace:packages/styled"
+    "@toss-ui/styled-variants": "workspace:packages/styled-variants"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "*",

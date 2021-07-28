@@ -1,5 +1,5 @@
 {
-  "name": "@toss-ui/styled",
+  "name": "@toss-ui/styled-variants",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -14,6 +14,8 @@
   },
   "devDependencies": {
     "@babel/core": "*",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@mdx-js/react": "*",
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-json": "*",
@@ -31,7 +33,10 @@
     "@types/prettier": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "@types/react-is": "^17",
     "@types/rollup-plugin-peer-deps-external": "*",
+    "@types/styled-components": "^5",
+    "@types/styled-system": "^5",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "babel-loader": "*",
@@ -52,9 +57,12 @@
     "prettier": "*",
     "react": "*",
     "react-dom": "*",
+    "react-is": "^17.0.2",
     "rollup": "*",
     "rollup-plugin-peer-deps-external": "*",
     "rollup-plugin-typescript2": "*",
+    "styled-components": "^5.3.0",
+    "styled-system": "^5.1.5",
     "ts-jest": "*",
     "tslib": "*",
     "typescript": "*"

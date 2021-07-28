@@ -1,0 +1,64 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { EmotionBox, StyledComponentsBox } from './components';
+
+<Meta title="Basics/createVariantPropInterpolation" />
+
+# createVariantPropInterpolation
+
+prop interpolation을 지원하는 css-in-js 라이브러리에서 variant를 쉽게 정의할 수 있는 함수입니다.
+
+<Story name="Example: emotion" />
+
+## Example: emotion
+
+```typescript
+import styled from '@emotion/styled';
+import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
+
+const backgroundColorVariant = createVariantPropInterpolation(
+  'backgroundColor',
+  {
+    success: { backgroundColor: 'seagreen' },
+    danger: { backgroundColor: 'hotpink' },
+  }
+);
+
+export const EmotionBox = styled.div(backgroundColorVariant, {
+  width: 100,
+  height: 100,
+});
+```
+
+<Canvas withSource="open">
+  <Story name="emotion">
+    <EmotionBox backgroundColor="success" />
+    <EmotionBox backgroundColor="danger" />
+  </Story>
+</Canvas>
+
+## Example: styled-components
+
+```typescript
+import styled from 'styled-components';
+import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
+
+const backgroundColorVariant = createVariantPropInterpolation(
+  'backgroundColor',
+  {
+    success: { backgroundColor: 'seagreen' },
+    danger: { backgroundColor: 'hotpink' },
+  }
+);
+
+export const StyledComponentsBox = styled.div(backgroundColorVariant, {
+  width: 100,
+  height: 100,
+});
+```
+
+<Canvas withSource="open">
+  <Story name="styled-components">
+    <StyledComponentsBox backgroundColor="success" />
+    <StyledComponentsBox backgroundColor="danger" />
+  </Story>
+</Canvas>
