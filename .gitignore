@@ -319,3 +319,6 @@ $RECYCLE.BIN/
 
 ### rollup ###
 .rollup.cache
+
+### storybook ###
+storybook-static
