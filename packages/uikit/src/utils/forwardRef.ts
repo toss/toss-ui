@@ -1,14 +1,21 @@
 import * as React from 'react';
-import { AsableComponent, AsableElementType, OverrideProps } from '../types';
+import {
+  AsableComponent,
+  AsableElementType,
+  AsableProps,
+  OverrideProps,
+} from '../types';
 
 export const forwardRef: <
   Props extends object,
-  Component extends AsableElementType
+  Component extends AsableElementType = never
 >(
   component: React.ForwardRefRenderFunction<
     any,
-    OverrideProps<React.ComponentProps<Component>, Props> & {
-      as?: Component;
-    }
+    OverrideProps<React.ComponentProps<Component>, Props> &
+      Component extends never
+      ? {}
+      : AsableProps<Component>
   >
-) => AsableComponent<Component, Props> = React.forwardRef as any;
+) => Component extends never ? Component : AsableComponent<Component, Props> =
+  React.forwardRef as any;
