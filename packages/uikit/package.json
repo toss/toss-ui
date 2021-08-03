@@ -1,5 +1,5 @@
 {
-  "name": "@toss-ui/react-primitives",
+  "name": "@toss-ui/uikit",
   "main": "src/index.ts",
   "publishConfig": {
     "main": "dist/cjs/index.js",
@@ -15,8 +15,13 @@
   "dependencies": {
     "@toss-ui/styled-variants": "workspace:packages/styled-variants"
   },
+  "peerDependencies": {
+    "react": "^16.8"
+  },
   "devDependencies": {
     "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "*",
     "@mdx-js/react": "*",
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-json": "*",
@@ -26,14 +31,19 @@
     "@storybook/addon-essentials": "*",
     "@storybook/addon-links": "*",
     "@storybook/react": "*",
+    "@testing-library/react": "^12.0.0",
     "@types/babel__core": "*",
+    "@types/babel__preset-env": "*",
     "@types/eslint": "*",
     "@types/jest": "*",
     "@types/node": "*",
     "@types/prettier": "*",
+    "@types/react": "*",
+    "@types/react-test-renderer": "*",
     "@types/rollup-plugin-peer-deps-external": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "babel-jest": "*",
     "babel-loader": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
@@ -50,6 +60,8 @@
     "eslint-plugin-unicorn": "*",
     "jest": "*",
     "prettier": "*",
+    "react": "*",
+    "react-test-renderer": "*",
     "rollup": "*",
     "rollup-plugin-peer-deps-external": "*",
     "rollup-plugin-typescript2": "*",

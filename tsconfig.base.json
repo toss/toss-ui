@@ -16,10 +16,6 @@
     "sourceMap": true,
     "strict": true,
     "target": "ES2015",
-    "types": ["jest", "node"],
-    "paths": {
-      "@toss-ui/layout": ["packages/layout/src/index.ts"],
-      "@toss-ui/styled": ["packages/styled/src/index.ts"]
-    }
+    "types": ["jest", "node"]
   }
 }

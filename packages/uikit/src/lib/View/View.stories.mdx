@@ -1,0 +1,19 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import { View } from './View';
+
+<Meta title="Primitives/View" component={View} />
+
+# View
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Default View',
+    }}
+  >
+    {(args) => <View {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
