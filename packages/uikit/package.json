@@ -31,7 +31,7 @@
     "@storybook/addon-essentials": "*",
     "@storybook/addon-links": "*",
     "@storybook/react": "*",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/react": "*",
     "@types/babel__core": "*",
     "@types/babel__preset-env": "*",
     "@types/eslint": "*",
