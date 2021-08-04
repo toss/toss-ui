@@ -1,11 +1,9 @@
 import React, { ComponentProps } from 'react';
-import type { StandardizedStyleWithVariants } from '../../types';
+import type {
+  InjectStyleFunction,
+  StandardizedStyleWithVariants,
+} from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
-
-type InjectStyleFunction = (
-  component: React.ComponentType<any>,
-  styles: StandardizedStyleWithVariants<unknown, unknown>
-) => React.ComponentType<any>;
 
 interface StyledOptions {
   injectStyle?: InjectStyleFunction;
