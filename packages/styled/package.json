@@ -23,6 +23,7 @@
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-json": "*",
     "@rollup/plugin-node-resolve": "*",
+    "@stitches/react": "*",
     "@storybook/addon-actions": "*",
     "@storybook/addon-docs": "*",
     "@storybook/addon-essentials": "*",

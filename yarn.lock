@@ -2703,6 +2703,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stitches/react@npm:*, @stitches/react@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "@stitches/react@npm:0.2.3"
+  peerDependencies:
+    react: ">= 16.3.0"
+  checksum: e9868537bbbe8c3ea868f0acbb15cc8d1197ee4feb43279bdabcd233b02ac62a61f4a82836ea8d5b982cd4c48f0cd011815b6bb7d10e103f784dd7e2b24f9165
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-actions@npm:*, @storybook/addon-actions@npm:6.3.4":
   version: 6.3.4
   resolution: "@storybook/addon-actions@npm:6.3.4"
@@ -4711,6 +4720,7 @@ __metadata:
     "@rollup/plugin-commonjs": "*"
     "@rollup/plugin-json": "*"
     "@rollup/plugin-node-resolve": "*"
+    "@stitches/react": "*"
     "@storybook/addon-actions": "*"
     "@storybook/addon-docs": "*"
     "@storybook/addon-essentials": "*"
@@ -15504,6 +15514,7 @@ resolve@^2.0.0-next.3:
     "@rollup/plugin-commonjs": ^19.0.1
     "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^13.0.2
+    "@stitches/react": ^0.2.3
     "@storybook/addon-actions": ^6.3.4
     "@storybook/addon-docs": ^6.3.4
     "@storybook/addon-essentials": ^6.3.4
