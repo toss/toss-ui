@@ -14,7 +14,7 @@ function Button(
 
 export const StyledButton = styled(Button, {
   backgroundColor: 'blueviolet',
-  border: 1,
+  border: 0,
   borderRadius: 12,
   color: 'white',
   fontWeight: 'bold',
