@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { StyledButton } from './using-with-css-in-js';
+
+<Meta title="Basics/Using with CSS-in-JS" />
+
+# Using with CSS-in-JS
+
+## with emotion
+
+```tsx
+import { createStyled, injectEmotionStyles } from '@toss-ui/styled';
+
+const styled = createStyled({ injectStyle: injectEmotionStyles });
+
+function Button(props) {
+  return <button {...props} />;
+}
+
+export const StyledButton = styled(Button, {
+  backgroundColor: 'blueviolet',
+  border: 0,
+  borderRadius: 12,
+  color: 'white',
+  fontWeight: 'bold',
+  padding: '12px 16px',
+});
+```
+
+<Canvas withSource="open">
+  <Story name="with emotion">
+    <StyledButton>I'm styled with emotion</StyledButton>
+  </Story>
+</Canvas>
