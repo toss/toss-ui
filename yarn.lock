@@ -4730,7 +4730,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "*"
     "@typescript-eslint/parser": "*"
     babel-loader: "*"
-    csstype: ^3.0.8
+    csstype: "*"
     eslint: "*"
     eslint-config-airbnb: "*"
     eslint-config-airbnb-typescript: "*"
@@ -8015,17 +8015,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:*, csstype@npm:^3.0.2, csstype@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "csstype@npm:3.0.8"
+  checksum: e15233592a2c580fd72c4346a5c921044b8f4f29bcb81628a81199c4d6a91eb8f8e4875f440ef9c990e85f179a3370f3b842fe55e4743119ad0ce712519e7123
+  languageName: node
+  linkType: hard
+
 "csstype@npm:^2.5.7":
   version: 2.6.17
   resolution: "csstype@npm:2.6.17"
   checksum: 82128d8c8b515a874eeb734f6ed3a32871180f37c7c5665951bfc9932415f6a15298d10fe7f973553f528a5c6cd478ad5a4bd55f213171b9e08ffe13d58fded7
-  languageName: node
-  linkType: hard
-
-"csstype@npm:^3.0.2, csstype@npm:^3.0.8":
-  version: 3.0.8
-  resolution: "csstype@npm:3.0.8"
-  checksum: e15233592a2c580fd72c4346a5c921044b8f4f29bcb81628a81199c4d6a91eb8f8e4875f440ef9c990e85f179a3370f3b842fe55e4743119ad0ce712519e7123
   languageName: node
   linkType: hard
 
@@ -15525,6 +15525,7 @@ resolve@^2.0.0-next.3:
     "@typescript-eslint/parser": ^4.28.3
     babel-jest: ^27.0.6
     babel-loader: ^8.2.2
+    csstype: ^3.0.8
     eslint: ^7.30.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1

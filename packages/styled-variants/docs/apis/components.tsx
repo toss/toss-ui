@@ -1,6 +1,6 @@
 import emotion from '@emotion/styled';
 import styledComponents from 'styled-components';
-import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
+import { createVariantPropInterpolation } from '../../src';
 
 const backgroundColorVariant = createVariantPropInterpolation(
   'backgroundColor',

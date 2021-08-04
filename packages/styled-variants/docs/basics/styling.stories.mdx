@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { StyledButton, ColorableButton } from './components';
+
+<Meta title="Basics/Getting Started" />
+
+# Getting Started
+
+## `createStyled()`
+
+```tsx
+import { createStyled } from './createStyled';
+
+const styled = createStyled();
+```
+
+## Styling
+
+```tsx
+function Button(props) {
+  return <button {...props} />;
+}
+
+export const StyledButton = styled(Button, {
+  backgroundColor: 'blueviolet',
+  border: 1,
+  borderRadius: 12,
+  color: 'white',
+  fontWeight: 'bold',
+  padding: '12px 16px',
+});
+```
+
+<Canvas withSource="open">
+  <Story name="Styling">
+    <StyledButton>I'm styled</StyledButton>
+  </Story>
+</Canvas>
+
+## Variants
+
+```tsx
+export const ColorableButton = styled(StyledButton, {
+  variants: {
+    appearance: {
+      success: {
+        backgroundColor: 'seagreen',
+      },
+      danger: {
+        backgroundColor: 'hotpink',
+      },
+    },
+  },
+});
+```
+
+<Canvas withSource="open">
+  <Story name="Variants">
+    <ColorableButton appearance="success">Success</ColorableButton>
+    <ColorableButton appearance="danger">Danger</ColorableButton>
+  </Story>
+</Canvas>

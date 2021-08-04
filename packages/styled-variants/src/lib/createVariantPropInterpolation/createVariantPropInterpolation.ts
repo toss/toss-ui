@@ -1,9 +1,4 @@
-import { CSSProperties } from 'react';
-
-export type VariantConfig<Variants extends string> = Record<
-  Variants,
-  CSSProperties
->;
+import { VariantConfig } from '../../types';
 
 export function createVariantPropInterpolation<
   PropName extends string,
