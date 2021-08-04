@@ -4700,9 +4700,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@toss-ui/styled-variants@workspace:packages/styled-variants":
+"@toss-ui/styled@workspace:packages/styled":
   version: 0.0.0-use.local
-  resolution: "@toss-ui/styled-variants@workspace:packages/styled-variants"
+  resolution: "@toss-ui/styled@workspace:packages/styled"
   dependencies:
     "@babel/core": "*"
     "@emotion/react": "*"
@@ -4780,7 +4780,7 @@ __metadata:
     "@storybook/addon-links": "*"
     "@storybook/react": "*"
     "@testing-library/react": "*"
-    "@toss-ui/styled-variants": "workspace:packages/styled-variants"
+    "@toss-ui/styled": "workspace:packages/styled"
     "@types/babel__core": "*"
     "@types/babel__preset-env": "*"
     "@types/eslint": "*"

@@ -1,5 +1,5 @@
 {
-  "name": "@toss-ui/styled-variants",
+  "name": "@toss-ui/styled",
   "main": "src/index.ts",
   "publishConfig": {
     "main": "dist/cjs/index.js",

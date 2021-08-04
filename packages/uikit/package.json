@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@toss-ui/styled-variants": "workspace:packages/styled-variants"
+    "@toss-ui/styled": "workspace:packages/styled"
   },
   "peerDependencies": {
     "@emotion/react": "^11",
