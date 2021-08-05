@@ -1,12 +1,12 @@
 import React from 'react';
 import type {
-  InjectStyleFunction,
+  InjectStylesFunction,
   StandardizedStyleWithVariants,
 } from '../../types';
 import { injectReactInlineStyles } from '../inject-styles';
 
 interface StyledOptions {
-  injectStyle?: InjectStyleFunction;
+  injectStyles?: InjectStylesFunction;
 }
 
 export function createStyled(options: StyledOptions = {}) {
@@ -22,5 +22,5 @@ export function createStyled(options: StyledOptions = {}) {
       {
         [k in keyof Variants]?: keyof Variants[k];
       }
-  > => (options.injectStyle ?? injectReactInlineStyles)(component, styles);
+  > => (options.injectStyles ?? injectReactInlineStyles)(component, styles);
 }

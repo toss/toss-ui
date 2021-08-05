@@ -1,6 +1,6 @@
 import type { StandardizedStyleWithVariants } from './standardized-style';
 
-export type InjectStyleFunction = (
+export type InjectStylesFunction = (
   component: React.ComponentType<any>,
-  styles: StandardizedStyleWithVariants<unknown, unknown>
+  styles: StandardizedStyleWithVariants<any, any>
 ) => React.ComponentType<any>;

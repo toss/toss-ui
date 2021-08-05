@@ -5,8 +5,8 @@ import {
   injectStitchesStyles,
 } from '../../src';
 
-const styledWithEmotion = createStyled({ injectStyle: injectEmotionStyles });
-const styledWithStitches = createStyled({ injectStyle: injectStitchesStyles });
+const styledWithEmotion = createStyled({ injectStyles: injectEmotionStyles });
+const styledWithStitches = createStyled({ injectStyles: injectStitchesStyles });
 
 function Button(
   props: React.DetailedHTMLProps<

@@ -1,12 +1,9 @@
 import { styled as stitchesStyled } from '@stitches/react';
-import type {
-  InjectStyleFunction,
-  StandardizedStyleWithVariants,
-} from '../../types';
+import type { InjectStylesFunction } from '../../types';
 
-export const injectStitchesStyles: InjectStyleFunction = (
+export const injectStitchesStyles: InjectStylesFunction = (
   component,
-  styles: StandardizedStyleWithVariants<any, any>
+  styles
 ) => {
   const { variants, defaultVariants, ...cssStyles } = styles;
   return stitchesStyled(component, {

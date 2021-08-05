@@ -10,7 +10,7 @@ import { EmotionButton, StitchesButton } from './using-with-css-in-js';
 ```tsx
 import { createStyled, injectEmotionStyles } from '@toss-ui/styled';
 
-const styled = createStyled({ injectStyle: injectEmotionStyles });
+const styled = createStyled({ injectStyles: injectEmotionStyles });
 
 function Button(props) {
   return <button {...props} />;
@@ -37,7 +37,7 @@ export const EmotionButton = styled(Button, {
 ```tsx
 import { createStyled, injectStitchesStyles } from '@toss-ui/styled';
 
-const styled = createStyled({ injectStyle: injectStitchesStyles });
+const styled = createStyled({ injectStyles: injectStitchesStyles });
 
 function Button(props) {
   return <button {...props} />;

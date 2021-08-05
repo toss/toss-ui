@@ -1,13 +1,10 @@
 import emotionStyled from '@emotion/styled';
-import type {
-  InjectStyleFunction,
-  StandardizedStyleWithVariants,
-} from '../../types';
+import type { InjectStylesFunction as InjectStylesFunction } from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
 
-export const injectEmotionStyles: InjectStyleFunction = (
+export const injectEmotionStyles: InjectStylesFunction = (
   component,
-  styles: StandardizedStyleWithVariants<any, any>
+  styles
 ) => {
   const { variants, defaultVariants, ...cssStyles } = styles;
   const interpolatedStyles = Object.entries(styles.variants ?? {}).map(

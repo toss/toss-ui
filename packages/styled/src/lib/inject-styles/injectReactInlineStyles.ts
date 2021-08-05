@@ -1,14 +1,10 @@
 import type { ComponentProps } from 'react';
 import React from 'react';
-import type {
-  InjectStyleFunction,
-  StandardizedStyleWithVariants,
-} from '../../types';
+import type { InjectStylesFunction } from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
 
-export const injectReactInlineStyles: InjectStyleFunction =
-  (component, styles: StandardizedStyleWithVariants<any, any>) =>
-  (props: ComponentProps<typeof component>) => {
+export const injectReactInlineStyles: InjectStylesFunction =
+  (component, styles) => (props: ComponentProps<typeof component>) => {
     const { variants, defaultVariants, ...cssStyles } = styles;
     const interpolatedStyles = Object.entries(styles.variants ?? {})
       .map(([variantName, config]) =>
