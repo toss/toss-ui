@@ -9,8 +9,8 @@
     "test": "jest",
     "lint": "eslint ./src --ext .ts,.tsx",
     "build": "rollup --config rollup.config.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "STORYBOOK_TOSS_UI_STYLED__CSS_IN_JS=emotion start-storybook -p 6006",
+    "build-storybook": "STORYBOOK_TOSS_UI_STYLED__CSS_IN_JS=emotion build-storybook"
   },
   "dependencies": {
     "@toss-ui/styled": "workspace:packages/styled"
