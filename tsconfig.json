@@ -17,5 +17,6 @@
     "strict": true,
     "target": "ES2015",
     "types": ["jest", "node"]
-  }
+  },
+  "include": ["packages/**/*.ts", "packages/**/*.tsx"]
 }

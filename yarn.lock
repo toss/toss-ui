@@ -4782,7 +4782,6 @@ __metadata:
     "@toss-ui/styled": "workspace:packages/styled"
     "@types/babel__core": "*"
     "@types/babel__preset-env": "*"
-    "@types/eslint": "*"
     "@types/jest": "*"
     "@types/node": "*"
     "@types/prettier": "*"
@@ -4914,16 +4913,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*":
-  version: 7.28.0
-  resolution: "@types/eslint@npm:7.28.0"
-  dependencies:
-    "@types/estree": "*"
-    "@types/json-schema": "*"
-  checksum: eae026f960db17c8a6e88b736eeabc6da553846ca88668d0757d1ee74e4abf2bed40ccff28548c89b088f513e9064f7a458c831dd8ef4445d0b5dc85eb94e791
-  languageName: node
-  linkType: hard
-
 "@types/estree@npm:*":
   version: 0.0.50
   resolution: "@types/estree@npm:0.0.50"
@@ -5032,7 +5021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.4, @types/json-schema@npm:^7.0.5, @types/json-schema@npm:^7.0.7, @types/json-schema@npm:^7.0.8":
+"@types/json-schema@npm:^7.0.4, @types/json-schema@npm:^7.0.5, @types/json-schema@npm:^7.0.7, @types/json-schema@npm:^7.0.8":
   version: 7.0.8
   resolution: "@types/json-schema@npm:7.0.8"
   checksum: 435a3d18a88aeac7bc88c2cdd2c19466c62ce79303493edd72380cd4af9775c05f35d424d5e76ffe3f94575ebb535305c6cae928c5bfb9c39eafbfb6932520a1
@@ -9045,7 +9034,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.30.0":
+"eslint@npm:^7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -15426,7 +15415,7 @@ resolve@^2.0.0-next.3:
     babel-jest: ^27.0.6
     babel-loader: ^8.2.2
     csstype: ^3.0.8
-    eslint: ^7.30.0
+    eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^8.3.0

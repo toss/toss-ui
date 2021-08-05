@@ -1,2 +1,6 @@
-dist
+.rollup.cache
 coverage
+dist
+node_modules
+storybook-static
+.pnp.js
