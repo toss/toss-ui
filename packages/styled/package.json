@@ -12,6 +12,8 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
+    "@emotion/styled": "*",
+    "@stitches/react": "^1",
     "react": "^16.8"
   },
   "devDependencies": {

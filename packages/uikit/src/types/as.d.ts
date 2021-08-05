@@ -1,7 +1,7 @@
 import React from 'react';
 import { OverrideProps } from './utils';
 
-export type AsableElementType<Props = any> = React.ElementType<Props>;
+export type AsableElementType<Props = {}> = React.ElementType<Props>;
 
 export interface AsableProps<AsComponent extends AsableElementType> {
   as?: AsComponent;

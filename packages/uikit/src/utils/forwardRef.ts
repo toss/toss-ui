@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   AsableComponent,
   AsableElementType,
@@ -6,16 +6,16 @@ import {
   OverrideProps,
 } from '../types';
 
-export const forwardRef: <
-  Props extends object,
-  Component extends AsableElementType = never
->(
-  component: React.ForwardRefRenderFunction<
-    any,
-    OverrideProps<React.ComponentProps<Component>, Props> &
-      Component extends never
-      ? {}
-      : AsableProps<Component>
-  >
-) => Component extends never ? Component : AsableComponent<Component, Props> =
-  React.forwardRef as any;
+interface ForwardRefWithAs {
+  <Props extends {}, Component extends AsableElementType = never>(
+    component: React.ForwardRefRenderFunction<
+      AsableElementType,
+      OverrideProps<React.ComponentProps<Component>, Props> &
+        Component extends never
+        ? never
+        : AsableProps<Component>
+    >
+  ): Component extends never ? Component : AsableComponent<Component, Props>;
+}
+
+export const forwardRef = React.forwardRef as ForwardRefWithAs;

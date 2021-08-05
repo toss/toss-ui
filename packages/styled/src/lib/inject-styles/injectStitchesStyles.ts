@@ -7,6 +7,8 @@ export const injectStitchesStyles: InjectStylesFunction = (
 ) => {
   const { variants, defaultVariants, ...cssStyles } = styles;
   return stitchesStyled(component, {
+    // FIXME: 타입 세이프하게 타입 변경하기
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ...(cssStyles as any),
     variants,
     defaultVariants,

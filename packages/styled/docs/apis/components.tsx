@@ -10,13 +10,13 @@ const backgroundColorVariant = createVariantPropInterpolation(
   }
 );
 
-export const EmotionBox = emotion.div(backgroundColorVariant, {
+export const EmotionBox = emotion.div(backgroundColorVariant as any, {
   width: 100,
   height: 100,
 });
 
 export const StyledComponentsBox = styledComponents.div(
-  backgroundColorVariant,
+  backgroundColorVariant as any,
   {
     width: 100,
     height: 100,

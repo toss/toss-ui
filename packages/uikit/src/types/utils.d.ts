@@ -1,4 +1,5 @@
-export type OverrideProps<
-  ComponentProps extends object,
-  OverrideProps extends object = {}
-> = Omit<ComponentProps, keyof OverrideProps> & OverrideProps;
+export type OverrideProps<ComponentProps, OverridingProps> = Omit<
+  ComponentProps,
+  keyof OverridingProps
+> &
+  OverridingProps;

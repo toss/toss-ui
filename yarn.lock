@@ -2040,7 +2040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:*":
+"@emotion/styled@npm:*, @emotion/styled@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/styled@npm:11.3.0"
   dependencies:
@@ -4720,7 +4720,7 @@ __metadata:
   dependencies:
     "@babel/core": "*"
     "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@emotion/styled": ^11.3.0
     "@mdx-js/react": "*"
     "@rollup/plugin-commonjs": "*"
     "@rollup/plugin-json": "*"
@@ -4756,6 +4756,8 @@ __metadata:
     tslib: "*"
     typescript: "*"
   peerDependencies:
+    "@emotion/styled": "*"
+    "@stitches/react": "*"
     react: ^16.8
   languageName: unknown
   linkType: soft

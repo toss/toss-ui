@@ -10,13 +10,13 @@ export interface ViewProps extends GlobalDOMAtrributes {
   children?: ReactNode;
 }
 
-const _View = forwardRef<ViewProps, 'div'>(
-  ({ as: ElementType = 'div', ...otherProps }, ref) => {
-    return <ElementType ref={ref} {...otherProps} />;
-  }
+const ViewComponent = forwardRef<ViewProps, 'div'>(
+  ({ as: ElementType = 'div', ...otherProps }, ref) => (
+    <ElementType ref={ref} {...otherProps} />
+  )
 );
 
-export const View = styled(_View, {
+export const View = styled(ViewComponent, {
   display: 'flex',
 });
 

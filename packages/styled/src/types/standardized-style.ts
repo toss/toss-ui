@@ -1,15 +1,5 @@
-import * as CSS from 'csstype';
+import { CSSObject } from './css-properties';
 import { VariantConfig } from './variant';
-
-export type CSSPseudos = { [K in CSS.Pseudos]?: CSSObject };
-export type CSSProperties = CSS.PropertiesFallback<number | string>;
-export type CSSPropertiesWithMultiValues = {
-  [K in keyof CSSProperties]:
-    | CSSProperties[K]
-    | Extract<CSSProperties[K], string>[];
-};
-
-export interface CSSObject extends CSSPropertiesWithMultiValues, CSSPseudos {}
 
 // TODO: VariantConfig 의 올바른 generic type 지정하기
 export type StandardizedStylePrimitive = CSSObject | VariantConfig<string>;

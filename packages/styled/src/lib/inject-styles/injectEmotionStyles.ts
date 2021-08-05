@@ -1,16 +1,21 @@
 import emotionStyled from '@emotion/styled';
-import type { InjectStylesFunction as InjectStylesFunction } from '../../types';
+import type { InjectStylesFunction } from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
 
 export const injectEmotionStyles: InjectStylesFunction = (
   component,
-  styles
+  { variants, defaultVariants, ...cssStyles }
 ) => {
-  const { variants, defaultVariants, ...cssStyles } = styles;
-  const interpolatedStyles = Object.entries(styles.variants ?? {}).map(
+  const interpolatedStyles = Object.entries(variants ?? {}).map(
     ([variantName, config]) =>
       createVariantPropInterpolation(variantName, config)
   );
-  // FIXME: CSS.Pseudos 으로 감싸진 스타일 지원하고 any 제거하기
-  return emotionStyled(component)(cssStyles as any, ...interpolatedStyles);
+  return emotionStyled(component)(
+    // FIXME: CSS.Pseudos 으로 감싸진 스타일 지원하고 any 제거하기
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    cssStyles as any,
+    // TODO: emotion 타입으로 변환해주기
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ...(interpolatedStyles as any)
+  );
 };

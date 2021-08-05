@@ -1,5 +1,8 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: ['./tsconfig.json'],
+  },
   plugins: [
     '@typescript-eslint',
     'eslint-comments',
@@ -19,6 +22,15 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    // Useful for representing empty index signatures
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          '{}': false,
+        },
+      },
+    ],
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 'off',
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
@@ -28,6 +40,8 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     // No jsx extension: https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
     'react/jsx-filename-extension': 'off',
+    // Too restrictive
+    'react/jsx-props-no-spreading': 'off',
     // Prefer readability
     'react/no-unescaped-entities': 'off',
     // Use function hoisting to improve code readability
