@@ -1,6 +1,7 @@
 module.exports = {
-  extends: './shared-configs/.eslintrc',
+  extends: '@toss-ui',
   parserOptions: {
-    project: ['./tsconfig.*?.json'],
+    project: ['./**/tsconfig.*?.json'],
   },
+  root: true,
 };

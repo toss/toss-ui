@@ -1,0 +1,21 @@
+{
+  "name": "@toss-ui/eslint-config",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "eslint": "^7",
+    "eslint-config-airbnb": "^18",
+    "eslint-config-airbnb-typescript": "^12",
+    "eslint-config-prettier": "^8",
+    "eslint-import-resolver-node": "^0.3",
+    "eslint-plugin-eslint-comments": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jest": "^24",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-promise": "^5",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^4",
+    "eslint-plugin-unicorn": "^35"
+  }
+}
