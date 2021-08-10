@@ -9,7 +9,7 @@ import {
 interface ForwardRefWithAs {
   <Props extends {}, Component extends AsableElementType = never>(
     component: React.ForwardRefRenderFunction<
-      AsableElementType,
+      any, // eslint-disable-line @typescript-eslint/no-explicit-any
       OverrideProps<React.ComponentProps<Component>, Props> &
         Component extends never
         ? never

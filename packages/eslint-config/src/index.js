@@ -31,6 +31,11 @@ module.exports = {
         },
       },
     ],
+    // Use function hoisting to improve code readability
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      { functions: false, classes: true, variables: true },
+    ],
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 'off',
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
@@ -44,11 +49,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     // Prefer readability
     'react/no-unescaped-entities': 'off',
-    // Use function hoisting to improve code readability
-    'no-use-before-define': [
-      'error',
-      { functions: false, classes: true, variables: true },
-    ],
     // Allow everything except snakeCase
     'unicorn/filename-case': [
       'error',
@@ -64,5 +64,7 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     // Airbnb prefers forEach
     'unicorn/no-array-for-each': 'off',
+    // Too restrictive
+    'unicorn/no-array-reduce': 'off',
   },
 };

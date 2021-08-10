@@ -1,6 +1,8 @@
+.pnp.js
 .rollup.cache
 coverage
 dist
+jest.config.ts
 node_modules
+shared-configs
 storybook-static
-.pnp.js

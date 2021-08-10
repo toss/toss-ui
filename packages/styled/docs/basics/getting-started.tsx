@@ -9,6 +9,7 @@ function Button(
     HTMLButtonElement
   >
 ) {
+  // eslint-disable-next-line react/button-has-type
   return <button {...props} />;
 }
 

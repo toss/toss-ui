@@ -3,7 +3,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint ./packages/*/src/**/* --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
