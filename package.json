@@ -9,7 +9,14 @@
     "postpublish": "pinst --enable"
   },
   "lint-staged": {
-    "packages/*/src/*.{ts,tsx,json}": "prettier --write --ignore-unknown"
+    "*.{ts,tsx,json,mdx}": [
+      "prettier --write --ignore-unknown",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
