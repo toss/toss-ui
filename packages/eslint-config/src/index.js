@@ -36,6 +36,10 @@ module.exports = {
       'error',
       { functions: false, classes: true, variables: true },
     ],
+    // Not working as intended
+    // TODO: take a look at ts configs
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
     // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 'off',
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
@@ -49,17 +53,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     // Prefer readability
     'react/no-unescaped-entities': 'off',
-    // Allow everything except snakeCase
-    'unicorn/filename-case': [
-      'error',
-      {
-        cases: {
-          camelCase: true,
-          kebabCase: true,
-          pascalCase: true,
-        },
-      },
-    ],
+    // Allow abbreviation to be all uppercase
+    'unicorn/filename-case': 'off',
     // Common abbreviations are known and readable
     'unicorn/prevent-abbreviations': 'off',
     // Airbnb prefers forEach

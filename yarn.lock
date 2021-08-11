@@ -4791,6 +4791,7 @@ __metadata:
     "@storybook/react": "*"
     "@testing-library/react": "*"
     "@toss-ui/styled": "workspace:packages/styled"
+    "@toss-ui/utils": "workspace:packages/utils"
     "@types/babel__core": "*"
     "@types/babel__preset-env": "*"
     "@types/jest": "*"

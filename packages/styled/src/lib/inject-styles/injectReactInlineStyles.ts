@@ -7,9 +7,7 @@ export const injectReactInlineStyles: InjectStylesFunction =
     const { variants, defaultVariants, ...cssStyles } = styles;
     const interpolatedStyles = Object.entries(variants ?? {})
       .map(([variantName, config]) =>
-        Object.entries(
-          createVariantPropInterpolation(variantName, config)(props)
-        )
+        createVariantPropInterpolation(variantName, config)(props)
       )
       .reduce(
         (accStyle, currentStyle) => ({ ...accStyle, ...currentStyle }),

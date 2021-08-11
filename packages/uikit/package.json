@@ -12,7 +12,8 @@
     "build-storybook": "STORYBOOK_TOSS_UI_STYLED__CSS_IN_JS=emotion build-storybook"
   },
   "dependencies": {
-    "@toss-ui/styled": "workspace:packages/styled"
+    "@toss-ui/styled": "workspace:packages/styled",
+    "@toss-ui/utils": "workspace:packages/utils"
   },
   "peerDependencies": {
     "@emotion/react": "^11",

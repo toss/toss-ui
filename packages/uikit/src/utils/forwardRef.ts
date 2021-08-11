@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  AsableComponent,
   AsableElementType,
   AsableProps,
   OverrideProps,
+  UIKitComponent,
 } from '../lib/types';
 
 interface ForwardRefWithAs {
@@ -15,7 +15,7 @@ interface ForwardRefWithAs {
         ? never
         : AsableProps<Component>
     >
-  ): Component extends never ? Component : AsableComponent<Component, Props>;
+  ): Component extends never ? Component : UIKitComponent<Component, Props>;
 }
 
 export const forwardRef = React.forwardRef as ForwardRefWithAs;

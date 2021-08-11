@@ -1,0 +1,55 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import { View } from './View.docs';
+
+<Meta title="Primitives/View" component={View} />
+
+# View
+
+```tsx
+const config = createUIKitConfig({
+  colors: {
+    red600: 'red',
+    blue600: 'blue',
+  },
+  typographys: {
+    header: {
+      fontSize: 20,
+      fontWeight: 'bold',
+    },
+    paragraph: {
+      fontSize: 16,
+      fontWeight: 'normal',
+    },
+  },
+});
+
+export const View = createView(config);
+```
+
+<Canvas withSource="open">
+  <Story
+    name="Default"
+    args={{
+      as: 'div',
+      children: 'Default View',
+      backgroundColor: 'red600',
+      color: 'blue600',
+      typography: 'header',
+    }}
+    argTypes={{
+      backgroundColor: {
+        options: ['red600', 'blue600'],
+      },
+      color: {
+        options: ['red600', 'blue600'],
+      },
+      typography: {
+        options: ['header', 'paragraph'],
+      },
+    }}
+  >
+    {(args) => <View {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
