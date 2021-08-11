@@ -1,7 +1,7 @@
 import { styled } from '@toss-ui/styled';
 import React, { ReactNode } from 'react';
-import { GlobalDOMAtrributes } from '../../types/dom';
-import { forwardRef } from '../../utils/forwardRef';
+import { GlobalDOMAtrributes } from '../../../types/dom';
+import { forwardRef } from '../../../utils/forwardRef';
 
 export interface ViewProps extends GlobalDOMAtrributes {
   /**
