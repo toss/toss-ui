@@ -4,7 +4,7 @@ import {
   AsableElementType,
   AsableProps,
   OverrideProps,
-} from '../types';
+} from '../lib/types';
 
 interface ForwardRefWithAs {
   <Props extends {}, Component extends AsableElementType = never>(
