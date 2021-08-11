@@ -1,4 +1,4 @@
-import { createUIKitConfig, createView } from '../../src';
+import { createUIKitConfig, createView } from '../../../src';
 
 const config = createUIKitConfig({
   colors: {
