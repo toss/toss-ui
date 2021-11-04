@@ -1,0 +1,36 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Stack, RedView, BlueView } from './Stack.docs';
+
+<Meta title="Primitives/Stack" component={Stack} />
+
+# Stack
+
+```tsx
+const config = createUIKitConfig({});
+
+export const Stack = createStack(config);
+```
+
+<Canvas withSource="open">
+  <Story
+    name="Default"
+    args={{
+      direction: 'vertical',
+    }}
+    argTypes={{
+      direction: {
+        options: ['horizontal', 'vertical'],
+      },
+    }}
+  >
+    {(args) => (
+      <Stack {...args}>
+        <RedView />
+        <BlueView />
+        <RedView />
+      </Stack>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
