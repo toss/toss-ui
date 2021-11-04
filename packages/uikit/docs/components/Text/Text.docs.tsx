@@ -1,11 +1,7 @@
 import { createText, createUIKitConfig } from '../../../src';
 
 const config = createUIKitConfig({
-  colors: {
-    red600: 'red',
-    blue600: 'blue',
-  },
-  typographys: {
+  typography: {
     header: {
       fontSize: 20,
       fontWeight: 'bold',

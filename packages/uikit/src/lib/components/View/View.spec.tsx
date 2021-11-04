@@ -6,10 +6,7 @@ import { createUIKitConfig } from '../../utils/createUIKitConfig';
 describe('View', () => {
   it('When passing children, draw it', () => {
     // arrange
-    const config = createUIKitConfig({
-      colors: {},
-      typographys: {},
-    });
+    const config = createUIKitConfig({});
     const View = createView(config);
     const childrenString = `I'm View`;
     const { getByText } = render(<View>{childrenString}</View>);
@@ -20,10 +17,7 @@ describe('View', () => {
 
   it('When passing `button` to the `as` prop, render a button element', () => {
     // arrange
-    const config = createUIKitConfig({
-      colors: {},
-      typographys: {},
-    });
+    const config = createUIKitConfig({});
     const View = createView(config);
     const asElement = 'button';
     const { container } = render(<View as={asElement}>I'm Button</View>);
@@ -39,7 +33,7 @@ describe('View', () => {
         red600: 'red',
         blue600: 'blue',
       },
-      typographys: {
+      typography: {
         header: {
           fontSize: 20,
           fontWeight: 'bold',
@@ -49,10 +43,20 @@ describe('View', () => {
           fontWeight: 'normal',
         },
       },
+      space: {
+        small: '4px',
+        big: '16px',
+      },
     });
     const View = createView(config);
     const { container } = render(
-      <View backgroundColor="red600" color="blue600" typography="header">
+      <View
+        backgroundColor="red600"
+        color="blue600"
+        typography="header"
+        marginHorizontal="small"
+        marginVertical="big"
+      >
         View
       </View>
     );
@@ -63,5 +67,9 @@ describe('View', () => {
     expect(viewElement?.style.color).toBe('blue');
     expect(viewElement?.style.fontSize).toBe('20px');
     expect(viewElement?.style.fontWeight).toBe('bold');
+    expect(viewElement?.style.marginTop).toBe('16px');
+    expect(viewElement?.style.marginBottom).toBe('16px');
+    expect(viewElement?.style.marginLeft).toBe('4px');
+    expect(viewElement?.style.marginRight).toBe('4px');
   });
 });

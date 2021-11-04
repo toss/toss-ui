@@ -21,9 +21,11 @@ TextComponent.displayName = '_Text';
 
 // TODO: typing return type
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function createText<Color extends string, Typography extends string>(
-  config: UIKitConfig<Color, Typography>
-) {
+export function createText<
+  Color extends string | number,
+  Typography extends string | number,
+  Space extends string | number
+>(config: UIKitConfig<Color, Typography, Space>) {
   const { backgroundColor, color, typography } = config;
   const Text = styled(TextComponent, {
     variants: {

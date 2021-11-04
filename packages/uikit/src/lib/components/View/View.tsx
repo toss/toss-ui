@@ -21,16 +21,13 @@ ViewComponent.displayName = '_View';
 
 // TODO: typing return type
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function createView<Color extends string, Typography extends string>(
-  config: UIKitConfig<Color, Typography>
-) {
-  const { backgroundColor, color, typography } = config;
+export function createView<
+  Color extends string | number,
+  Typography extends string | number,
+  Space extends string | number
+>(config: UIKitConfig<Color, Typography, Space>) {
   const View = styled(ViewComponent, {
-    variants: {
-      backgroundColor,
-      color,
-      typography,
-    },
+    variants: config,
   });
   View.displayName = 'View';
 
