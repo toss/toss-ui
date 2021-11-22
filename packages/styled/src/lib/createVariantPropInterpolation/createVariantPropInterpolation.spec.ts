@@ -22,7 +22,8 @@ describe('createVariantPropInterpolation', () => {
     // act
     const colorVariantPropInterpolation = createVariantPropInterpolation(
       variantName,
-      variantConfig
+      variantConfig,
+      {}
     );
     const whiteColorCSSProps = colorVariantPropInterpolation(whiteColorProp);
     const blackColorCSSProps = colorVariantPropInterpolation(blackColorProp);
@@ -35,4 +36,6 @@ describe('createVariantPropInterpolation', () => {
       color: variantConfig.black.color,
     });
   });
+
+  // TODO: test media feature
 });

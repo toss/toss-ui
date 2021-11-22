@@ -3,15 +3,14 @@ import type { InjectStylesFunctionGenerator } from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
 
 export const injectReactInlineStylesGenerator: InjectStylesFunctionGenerator =
-  ({ media }) =>
+  ({ media = {} }) =>
   (component, { variants, defaultVariants, ...cssStyles }) =>
   (props) => {
-    if (media !== undefined) {
-      // TODO: implement media query
-    }
+    // TODO: implement media query
+
     const interpolatedStyles = Object.entries(variants ?? {})
       .map(([variantName, config]) =>
-        createVariantPropInterpolation(variantName, config)(props)
+        createVariantPropInterpolation(variantName, config, media)(props)
       )
       .reduce(
         (accStyle, currentStyle) => ({ ...accStyle, ...currentStyle }),

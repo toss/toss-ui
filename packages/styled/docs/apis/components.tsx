@@ -9,7 +9,8 @@ const backgroundColorVariant = createVariantPropInterpolation(
   {
     success: { backgroundColor: 'seagreen' },
     danger: { backgroundColor: 'hotpink' },
-  }
+  },
+  {}
 );
 
 export const EmotionBox = emotion.div(

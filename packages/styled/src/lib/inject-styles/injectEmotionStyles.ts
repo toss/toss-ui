@@ -18,7 +18,7 @@ export const injectEmotionStylesGenerator: InjectStylesFunctionGenerator = ({
 
     const interpolatedStyles = Object.entries(variants).map(
       ([variantName, config]) =>
-        createVariantPropInterpolation(variantName, config)
+        createVariantPropInterpolation(variantName, config, prefixedMedia)
     );
 
     return emotionStyled(component)(

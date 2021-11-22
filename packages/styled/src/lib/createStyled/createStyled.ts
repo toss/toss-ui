@@ -31,7 +31,9 @@ export function createStyled<Media extends string>({
   ): React.ComponentType<
     React.ComponentProps<C> &
       {
-        [k in keyof Variants]?: keyof Variants[k];
+        [k in keyof Variants]?:
+          | keyof Variants[k]
+          | { [key in Media as `@${key}`]?: keyof Variants[k] };
       }
   > => injectStyles(component, styles);
 }

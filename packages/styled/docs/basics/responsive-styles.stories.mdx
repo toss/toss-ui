@@ -1,11 +1,11 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { ResponsiveButton } from './responsive-styles';
+import { ResponsiveButton1, ResponsiveButton2 } from './responsive-styles';
 
 <Meta title="Basics/Responsive Styles" />
 
 # Responsive Styles
 
-## with emotion
+## Media Config
 
 ```tsx
 const styled = createStyled({
@@ -16,8 +16,12 @@ const styled = createStyled({
     lg: '(min-width: 1024px)',
   },
 });
+```
 
-export const ResponsiveButton = styled(Button, {
+## Responsive CSS
+
+```tsx
+export const ResponsiveButton1 = styled(Button, {
   border: 0,
   borderRadius: 12,
   fontWeight: 'bold',
@@ -39,7 +43,43 @@ export const ResponsiveButton = styled(Button, {
 ```
 
 <Canvas withSource="open">
-  <Story name="with emotion">
-    <ResponsiveButton>I'm responsive</ResponsiveButton>
+  <Story name="Responsive CSS">
+    <ResponsiveButton1>I'm responsive</ResponsiveButton1>
+  </Story>
+</Canvas>
+
+## Responsive Variant
+
+```tsx
+export const ResponsiveButton2 = styled(Button, {
+  border: 0,
+  borderRadius: 12,
+  fontSize: 12,
+  fontWeight: 'bold',
+  padding: '12px 16px',
+  backgroundColor: 'blueviolet',
+  color: 'white',
+
+  variants: {
+    font: {
+      big: {
+        fontSize: 18,
+      },
+      medium: {
+        fontSize: 16,
+      },
+      small: {
+        fontSize: 14,
+      },
+    },
+  },
+});
+```
+
+<Canvas withSource="open">
+  <Story name="Responsive Variants">
+    <ResponsiveButton2 font={{ '@sm': 'small', '@md': 'medium', '@lg': 'big' }}>
+      I'm responsive
+    </ResponsiveButton2>
   </Story>
 </Canvas>

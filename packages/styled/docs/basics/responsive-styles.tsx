@@ -20,7 +20,7 @@ function Button(
   return <button {...props} />;
 }
 
-export const ResponsiveButton = styled(Button, {
+export const ResponsiveButton1 = styled(Button, {
   border: 0,
   borderRadius: 12,
   fontWeight: 'bold',
@@ -37,5 +37,29 @@ export const ResponsiveButton = styled(Button, {
   },
   '@lg': {
     backgroundColor: 'green',
+  },
+});
+
+export const ResponsiveButton2 = styled(Button, {
+  border: 0,
+  borderRadius: 12,
+  fontSize: 12,
+  fontWeight: 'bold',
+  padding: '12px 16px',
+  backgroundColor: 'blueviolet',
+  color: 'white',
+
+  variants: {
+    font: {
+      big: {
+        fontSize: 18,
+      },
+      medium: {
+        fontSize: 16,
+      },
+      small: {
+        fontSize: 14,
+      },
+    },
   },
 });
