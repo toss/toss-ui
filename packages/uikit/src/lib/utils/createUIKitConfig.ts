@@ -13,13 +13,12 @@ function mapConfigValueToCSSVariant<Key extends string | number, Value>(
   const propertyNames = Array.isArray(cssPropertyNames)
     ? cssPropertyNames
     : [cssPropertyNames];
-  return mapObject(
-    configValue,
-    (_, value) =>
-      Object.fromEntries(
-        propertyNames.map((propertyName) => [propertyName, value])
-      ) as CSSProperties
-  );
+  return mapObject(configValue, (key, value) => [
+    key,
+    Object.fromEntries(
+      propertyNames.map((propertyName) => [propertyName, value])
+    ) as CSSProperties,
+  ]);
 }
 
 export function createUIKitConfig<
