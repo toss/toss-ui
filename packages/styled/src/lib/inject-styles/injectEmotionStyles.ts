@@ -7,7 +7,7 @@ export const injectEmotionStylesGenerator: InjectStylesFunctionGenerator = ({
   media = {},
 }) => {
   const prefixedMedia = mapObject(media, (key, value) => [
-    key,
+    `@${key}`,
     `@media ${value}`,
   ]);
   return (component, { variants = {}, defaultVariants, ...cssStyles }) => {

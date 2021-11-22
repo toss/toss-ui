@@ -28,14 +28,14 @@ export const ResponsiveButton = styled(Button, {
 
   backgroundColor: 'blueviolet',
   color: 'white',
-  sm: {
+  '@sm': {
     backgroundColor: 'red',
   },
-  md: {
+  '@md': {
     backgroundColor: 'yellow',
     color: 'black',
   },
-  lg: {
+  '@lg': {
     backgroundColor: 'green',
   },
 });
