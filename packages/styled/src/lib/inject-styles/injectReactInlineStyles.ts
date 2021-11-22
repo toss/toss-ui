@@ -1,10 +1,14 @@
 import React from 'react';
-import type { InjectStylesFunction } from '../../types';
+import type { InjectStylesFunctionGenerator } from '../../types';
 import { createVariantPropInterpolation } from '../createVariantPropInterpolation';
 
-export const injectReactInlineStyles: InjectStylesFunction =
-  (component, styles) => (props) => {
-    const { variants, defaultVariants, ...cssStyles } = styles;
+export const injectReactInlineStylesGenerator: InjectStylesFunctionGenerator =
+  ({ media }) =>
+  (component, { variants, defaultVariants, ...cssStyles }) =>
+  (props) => {
+    if (media !== undefined) {
+      // TODO: implement media query
+    }
     const interpolatedStyles = Object.entries(variants ?? {})
       .map(([variantName, config]) =>
         createVariantPropInterpolation(variantName, config)(props)

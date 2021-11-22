@@ -4740,6 +4740,7 @@ __metadata:
     "@storybook/addon-essentials": "*"
     "@storybook/addon-links": "*"
     "@storybook/react": "*"
+    "@toss-ui/utils": "workspace:packages/utils"
     "@types/babel__core": "*"
     "@types/jest": "*"
     "@types/mdx-js__react": "*"

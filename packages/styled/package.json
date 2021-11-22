@@ -54,5 +54,8 @@
     "ts-jest": "*",
     "tslib": "*",
     "typescript": "*"
+  },
+  "dependencies": {
+    "@toss-ui/utils": "workspace:packages/utils"
   }
 }

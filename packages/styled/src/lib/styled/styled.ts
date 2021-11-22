@@ -1,6 +1,9 @@
 import { getEnvironmentVariables } from '../../utils';
 import { createStyled } from '../createStyled';
-import { injectEmotionStyles, injectStitchesStyles } from '../inject-styles';
+import {
+  injectEmotionStylesGenerator,
+  injectStitchesStylesGenerator,
+} from '../inject-styles';
 
 export interface ProcessEnv {
   [key: string]: string | undefined;
@@ -8,11 +11,11 @@ export interface ProcessEnv {
 
 const ENV_CSS_IN_JS = getEnvironmentVariables('TOSS_UI_STYLED__CSS_IN_JS');
 
-const injectStyles =
+const injectStylesGenerator =
   ENV_CSS_IN_JS === 'emotion'
-    ? injectEmotionStyles
+    ? injectEmotionStylesGenerator
     : ENV_CSS_IN_JS === 'stitches'
-    ? injectStitchesStyles
+    ? injectStitchesStylesGenerator
     : undefined;
 
-export const styled = createStyled({ injectStyles });
+export const styled = createStyled({ injectStylesGenerator });

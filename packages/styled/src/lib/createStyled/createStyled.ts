@@ -1,15 +1,35 @@
 import React from 'react';
 import type {
-  InjectStylesFunction,
+  InjectStylesFunctionGenerator,
   StandardizedStyleWithVariants,
 } from '../../types';
-import { injectReactInlineStyles } from '../inject-styles';
+import { injectReactInlineStylesGenerator } from '../inject-styles';
 
-interface StyledOptions {
-  injectStyles?: InjectStylesFunction;
+interface StyledOptions<Media extends string> {
+  injectStylesGenerator?: InjectStylesFunctionGenerator;
+  media?: Record<Media, string>;
 }
 
-export function createStyled(options: StyledOptions = {}) {
+type StyledFunction = <
+  C extends React.ComponentType<any>, // eslint-disable-line @typescript-eslint/no-explicit-any
+  Variants,
+  DefaultVariants extends Variants
+>(
+  component: C,
+
+  styles: StandardizedStyleWithVariants<Variants, DefaultVariants>
+) => React.ComponentType<
+  React.ComponentProps<C> &
+    {
+      [k in keyof Variants]?: keyof Variants[k];
+    }
+>;
+
+export function createStyled<Media extends string>({
+  injectStylesGenerator = injectReactInlineStylesGenerator,
+  media,
+}: StyledOptions<Media> = {}): StyledFunction {
+  const injectStyles = injectStylesGenerator({ media });
   return <
     C extends React.ComponentType<any>, // eslint-disable-line @typescript-eslint/no-explicit-any
     Variants,
@@ -23,5 +43,5 @@ export function createStyled(options: StyledOptions = {}) {
       {
         [k in keyof Variants]?: keyof Variants[k];
       }
-  > => (options.injectStyles ?? injectReactInlineStyles)(component, styles);
+  > => injectStyles(component, styles);
 }

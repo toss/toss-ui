@@ -1,4 +1,4 @@
 export * from './css-properties';
-export * from './InjectStyleFunction';
+export * from './inject-style-function';
 export * from './standardized-style';
 export * from './variant';
