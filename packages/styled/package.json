@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "@emotion/styled": "*",
+    "@emotion/styled": "^11",
     "@stitches/react": "^1",
     "react": "^16.8"
   },
