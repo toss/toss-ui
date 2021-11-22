@@ -8,14 +8,18 @@ export type StandardizedStyle =
   | StandardizedStylePrimitive
   | StandardizedStyle[];
 
-export type StandardizedStyleWithVariants<
+export type StandardizedStyleWithVariantsAndMedia<
   Variants,
-  DefaultVariants extends Variants
-> = StandardizedStyle & {
-  variants?: {
-    [variantName in keyof Variants]: VariantConfig<keyof Variants[variantName]>;
+  DefaultVariants extends Variants,
+  Media extends string
+> = StandardizedStyle &
+  { [key in Media as `@${key}`]?: StandardizedStyle } & {
+    variants?: {
+      [variantName in keyof Variants]: VariantConfig<
+        keyof Variants[variantName]
+      >;
+    };
+    defaultVariants?: {
+      [k in keyof DefaultVariants]?: keyof DefaultVariants[k];
+    };
   };
-  defaultVariants?: {
-    [k in keyof DefaultVariants]?: keyof DefaultVariants[k];
-  };
-};
