@@ -12,8 +12,12 @@ export function createVariantPropInterpolation<
 ) {
   return (
     props: { [key in PropName]: Variants | Record<Media, Variants> }
-  ): CSSProperties => {
+  ): CSSProperties | undefined => {
     const propValue = props[propName];
+
+    if (propValue === undefined) {
+      return undefined;
+    }
 
     if (typeof propValue === 'string') {
       return config[propValue as Variants];
