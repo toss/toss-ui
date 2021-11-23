@@ -1,4 +1,4 @@
-import { VariantConfig } from '@toss-ui/styled/src/types';
+import { VariantConfig } from '@toss-ui/styled';
 
 export const flex = {
   direction: {
