@@ -10,30 +10,36 @@ interface StyledOptions<Media extends string> {
   media?: Record<Media, string>;
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+type StyledComponentType<
+  OriginalComponent extends React.ComponentType,
+  Variants,
+  Media extends string
+> = React.ComponentType<
+  React.ComponentProps<OriginalComponent> &
+    {
+      [variant in keyof Variants]?:
+        | keyof Variants[variant]
+        | { [key in Media as `@${key}`]?: keyof Variants[variant] };
+    }
+>;
+
+type StyledFunction<Media extends string> = <
+  OriginalComponent extends React.ComponentType,
+  Variants,
+  DefaultVariants extends Variants
+>(
+  component: OriginalComponent,
+  styles: StandardizedStyleWithVariantsAndMedia<
+    Variants,
+    DefaultVariants,
+    Media
+  >
+) => StyledComponentType<OriginalComponent, Variants, Media>;
+
 export function createStyled<Media extends string>({
   injectStylesGenerator = injectReactInlineStylesGenerator,
   media,
-}: StyledOptions<Media> = {}) {
+}: StyledOptions<Media> = {}): StyledFunction<Media> {
   const injectStyles = injectStylesGenerator({ media });
-  return <
-    C extends React.ComponentType<any>, // eslint-disable-line @typescript-eslint/no-explicit-any
-    Variants,
-    DefaultVariants extends Variants
-  >(
-    component: C,
-
-    styles: StandardizedStyleWithVariantsAndMedia<
-      Variants,
-      DefaultVariants,
-      Media
-    >
-  ): React.ComponentType<
-    React.ComponentProps<C> &
-      {
-        [k in keyof Variants]?:
-          | keyof Variants[k]
-          | { [key in Media as `@${key}`]?: keyof Variants[k] };
-      }
-  > => injectStyles(component, styles);
+  return (component, styles) => injectStyles(component, styles);
 }
