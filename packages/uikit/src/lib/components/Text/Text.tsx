@@ -25,8 +25,8 @@ export function createText<
   Color extends string | number,
   Typography extends string | number,
   Space extends string | number
->(config: UIKitConfig<Color, Typography, Space>) {
-  const { backgroundColor, color, typography } = config;
+>({ variants }: UIKitConfig<Color, Typography, Space>) {
+  const { backgroundColor, color, typography } = variants;
   const Text = styled(TextComponent, {
     variants: {
       backgroundColor,

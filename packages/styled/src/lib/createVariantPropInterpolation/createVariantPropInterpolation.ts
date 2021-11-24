@@ -19,13 +19,13 @@ export function createVariantPropInterpolation<
       return undefined;
     }
 
-    if (typeof propValue === 'string') {
-      return config[propValue as Variants];
+    if (typeof propValue === 'object') {
+      return mapObject(propValue, (key, value) => [
+        media[key as Media] ?? key,
+        config[value as Variants],
+      ]);
     }
 
-    return mapObject(propValue, (key, value) => [
-      media[key as Media] ?? key,
-      config[value as Variants],
-    ]);
+    return config[propValue as Variants];
   };
 }

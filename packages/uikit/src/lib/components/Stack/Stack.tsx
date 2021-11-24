@@ -26,13 +26,14 @@ export function createStack<
   Color extends string | number,
   Typography extends string | number,
   Space extends string | number
->(config: UIKitConfig<Color, Typography, Space>) {
+>({ variants, tokens }: UIKitConfig<Color, Typography, Space>) {
   const Stack = styled(StackComponent, {
     variants: {
-      ...config,
-      ...flex,
+      ...variants,
+      ...flex<Color, Typography, Space>(tokens),
     },
   });
+
   Stack.displayName = 'Stack';
 
   return Stack;

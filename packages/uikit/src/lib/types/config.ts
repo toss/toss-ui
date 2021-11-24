@@ -26,13 +26,24 @@ export interface UIKitConfig<
   Typography extends string | number,
   Space extends string | number
 > {
-  color: VariantConfig<Color>;
-  backgroundColor: VariantConfig<Color>;
-  typography: VariantConfig<Typography>;
-  marginTop: VariantConfig<Space>;
-  marginRight: VariantConfig<Space>;
-  marginBottom: VariantConfig<Space>;
-  marginLeft: VariantConfig<Space>;
-  marginHorizontal: VariantConfig<Space>;
-  marginVertical: VariantConfig<Space>;
+  tokens: {
+    colors?: { [key in Color]: ColorTokenValue };
+    typography?: {
+      [key in Typography]: TypographyTokenValue;
+    };
+    space?: {
+      [key in Space]: SpaceTokenValue;
+    };
+  };
+  variants: {
+    color: VariantConfig<Color>;
+    backgroundColor: VariantConfig<Color>;
+    typography: VariantConfig<Typography>;
+    marginTop: VariantConfig<Space>;
+    marginRight: VariantConfig<Space>;
+    marginBottom: VariantConfig<Space>;
+    marginLeft: VariantConfig<Space>;
+    marginHorizontal: VariantConfig<Space>;
+    marginVertical: VariantConfig<Space>;
+  };
 }

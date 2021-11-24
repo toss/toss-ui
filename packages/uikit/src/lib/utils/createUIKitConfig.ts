@@ -33,20 +33,28 @@ export function createUIKitConfig<
   // - config value를 토큰화하여 css property 간에 공유하여 사용할 수 있게 변경한다
   // - build time에 계산되도록 변경한다
   return {
-    backgroundColor: mapConfigValueToCSSVariant(colors, 'backgroundColor'),
-    color: mapConfigValueToCSSVariant(colors, 'color'),
-    marginBottom: mapConfigValueToCSSVariant(space, 'marginBottom'),
-    marginLeft: mapConfigValueToCSSVariant(space, 'marginLeft'),
-    marginRight: mapConfigValueToCSSVariant(space, 'marginRight'),
-    marginTop: mapConfigValueToCSSVariant(space, 'marginTop'),
-    marginHorizontal: mapConfigValueToCSSVariant(space, [
-      'marginLeft',
-      'marginRight',
-    ]),
-    marginVertical: mapConfigValueToCSSVariant(space, [
-      'marginBottom',
-      'marginTop',
-    ]),
-    typography: (typography ?? {}) as VariantConfig<Typography>,
+    tokens: {
+      colors,
+      typography,
+      space,
+    },
+    variants: {
+      // TODO: config에서 variant 분리하기
+      backgroundColor: mapConfigValueToCSSVariant(colors, 'backgroundColor'),
+      color: mapConfigValueToCSSVariant(colors, 'color'),
+      marginBottom: mapConfigValueToCSSVariant(space, 'marginBottom'),
+      marginLeft: mapConfigValueToCSSVariant(space, 'marginLeft'),
+      marginRight: mapConfigValueToCSSVariant(space, 'marginRight'),
+      marginTop: mapConfigValueToCSSVariant(space, 'marginTop'),
+      marginHorizontal: mapConfigValueToCSSVariant(space, [
+        'marginLeft',
+        'marginRight',
+      ]),
+      marginVertical: mapConfigValueToCSSVariant(space, [
+        'marginBottom',
+        'marginTop',
+      ]),
+      typography: (typography ?? {}) as VariantConfig<Typography>,
+    },
   };
 }

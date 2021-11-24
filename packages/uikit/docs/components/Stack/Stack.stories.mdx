@@ -16,11 +16,13 @@ export const Stack = createStack(config);
     name="Default"
     args={{
       direction: 'vertical',
+      gap: 8,
     }}
     argTypes={{
       direction: {
         options: ['horizontal', 'vertical'],
       },
+      gap: { type: 'number' },
     }}
   >
     {(args) => (

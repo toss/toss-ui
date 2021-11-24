@@ -25,9 +25,9 @@ export function createView<
   Color extends string | number,
   Typography extends string | number,
   Space extends string | number
->(config: UIKitConfig<Color, Typography, Space>) {
+>({ variants }: UIKitConfig<Color, Typography, Space>) {
   const View = styled(ViewComponent, {
-    variants: config,
+    variants,
   });
   View.displayName = 'View';
 

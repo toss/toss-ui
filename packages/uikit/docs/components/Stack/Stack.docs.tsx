@@ -6,6 +6,10 @@ const config = createUIKitConfig({
     red600: 'red',
     blue600: 'blue',
   },
+  space: {
+    4: 4,
+    8: 8,
+  },
 });
 
 const View = createView(config);
