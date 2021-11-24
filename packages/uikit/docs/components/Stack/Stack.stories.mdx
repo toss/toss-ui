@@ -6,7 +6,14 @@ import { Stack, RedView, BlueView } from './Stack.docs';
 # Stack
 
 ```tsx
-const config = createUIKitConfig({});
+const config = createUIKitConfig({
+  space: {
+    '2': 2,
+    '4': 4,
+    '6': 6,
+    '8': 8,
+  },
+});
 
 export const Stack = createStack(config);
 ```
@@ -16,13 +23,15 @@ export const Stack = createStack(config);
     name="Default"
     args={{
       direction: 'vertical',
-      gap: 8,
+      gap: '4',
     }}
     argTypes={{
       direction: {
         options: ['horizontal', 'vertical'],
       },
-      gap: { type: 'number' },
+      gap: {
+        options: ['2', '4', '6', '8'],
+      },
     }}
   >
     {(args) => (

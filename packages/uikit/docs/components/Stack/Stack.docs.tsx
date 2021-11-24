@@ -7,8 +7,10 @@ const config = createUIKitConfig({
     blue600: 'blue',
   },
   space: {
-    4: 4,
-    8: 8,
+    '2': 2,
+    '4': 4,
+    '6': 6,
+    '8': 8,
   },
 });
 
